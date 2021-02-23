@@ -1,0 +1,83 @@
+.login-modal {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: transparentize($main-color-dark, 0.2);
+  z-index: 10;
+}
+
+
+.login-modal__wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  right: 0;
+  top: 50%;
+  width: 400px;
+  margin: auto;
+  transform: translateY(-50%);
+  background-color: $main-color-light;
+}
+
+.login-modal__close-btn {
+  @include sizes(48px, 48px);
+  margin-left: auto;
+  color: transparentize($main-color-dark, 0.75);
+  border: none;
+  background: none;
+
+  &:hover,
+  &:focus {
+    color: $hover-theme-color;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.login-modal__form {
+  @include font-sizes(16px, 24px, 700);
+  display: flex;
+  flex-direction: column;
+  margin: -12px 40px 40px;
+}
+
+.login-modal__text {
+  margin-top: 0;
+  margin-bottom: 30px;
+  max-width: 280px;
+}
+
+.login-modal__input {
+  height: 60px;
+  padding: 19px 24px;
+  margin-bottom: 16px;
+}
+
+.login-modal__submit-btn {
+  @include font-sizes(24px, 33px, 600);
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding: 14px 20px;
+  color: $main-color-light;
+}
+
+.login-modal__link {
+  @include font-sizes(16px, 24px, 400);
+  margin-top: 16px;
+  text-decoration-style: dotted;
+}
+
+@media (max-width: $max-mobile-width) {
+  .login-modal__wrapper {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .login-modal__form {
+    margin: -22px 5.56% auto;
+  }
+}

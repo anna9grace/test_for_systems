@@ -1,0 +1,33 @@
+.form__input {
+  border: 2px solid transparentize($main-theme-color, 0.8);
+  border-radius: 8px;
+
+  &::placeholder {
+    font-family: inherit;
+    color: transparentize($main-color-dark, 0.54);
+  }
+
+  &:focus,
+  &:hover {
+    outline: none;
+
+    &::placeholder {
+      color: transparentize($main-color-dark, 0.8);
+    }
+  }
+}
+
+.form__btn {
+  background-color: $main-accent-color;
+  border-radius: 8px;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: $hover-accent-color;
+  }
+
+  &:active {
+    opacity: 0.9;
+  }
+}

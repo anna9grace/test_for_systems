@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Тестовое задание</title>
+  <link type="text/css" rel="stylesheet" href="css/normalize.css">
+  <link type="text/css" rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="page__body">
+  <header class="page-header">
+    <nav class="main-nav">
+      <button class="main-nav__menu-btn main-nav__menu-btn--open"></button>
+      <ul class="main-nav__menu">
+        <li class="main-nav__item">
+          <h3 class="main-nav__title">Личный кабинет</h3>
+          <p><a class="main-nav__link link" id="login-btn" href="#">Вход в Личный кабинет</a></p>
+        </li>
+        <li class="main-nav__item">
+          <h3 class="main-nav__title">Как это работает</h3>
+          <ul class="main-nav__sub-menu">
+            <li><a class="main-nav__link link" href="#">Условия использования сервиса</a></li>
+            <li><a class="main-nav__link link" href="#">Способы оплаты</a></li>
+            <li><a class="main-nav__link link" href="#">Часто задаваемые вопросы</a></li>
+            <li><a class="main-nav__link link" href="#">Служба поддержки</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <a class="page-header__logo">
+      <img src="./img/logo_site-logo.png" alt="Логотип Сайта" width="340" height="44">
+    </a>
+    <div class="page-header__help">
+      <a class="page-header__help-btn link" href="#">
+        <span class="visually-hidden">Помощь</span>
+        <svg width="40" height="41"><use xlink:href="img/sprite_auto.svg#ic_help"></use></svg>
+      </a>
+      <div class="page-header__info">
+        <p>Тел. поддержки</p>
+        <a class="page-header__info-phone" href="tel:88001234567">8 800 123-45-67</a>
+        <a class="page-header__info-mail link" href="mailto:adress@gmail.ru">Написать письмо</a>
+      </div>
+    </div>
+
+  </header>
+
+  <main>
+    <h1 class="visually-hidden">Онлайн-оплата государственных и муниципальных платежей</h1>
+
+    <section class="search-payments">
+      <form class="search-payments__form form container" action="#" method="GET">
+        <h2 class="search-payments__title">Поиск начислений</h2>
+        <div class="search-payments__field">
+          <label for="search-field" class="visually-hidden">Введите наименование начисления</label>
+          <input class="search-payments__input form__input" type="search" name="search" id="search-field" placeholder="Введите данные для поиска">
+          <button class="search-payments__btn form__btn" type="submit" aria-label="Найти">
+            <span>Найти</span>
+            <svg class="link" width="46" height="26"><use xlink:href="img/sprite_auto.svg#ic_search"></use></svg>
+          </button>
+        </div>
+        <p class="search-payments__text">Чем больше параметров введено, тем полнее результаты поиска</p>
+      </form>
+    </section>
+
+    <section class="types">
+      <h2 class="types__title">Здесь можно оплатить</h2>
+
+      <ul class="types__nav">
+        <li><a class="types__nav-link link" href="#driving-fines">Штрафы ГИБДД</a></li>
+        <li><a class="types__nav-link link" href="#court-debts">Судебные задолженности</a></li>
+        <li><a class="types__nav-link link" href="#taxes">Налоги</a></li>
+        <li><a class="types__nav-link link" href="#rosregister">Услуги Росреестра</a></li>
+        <li class="types__nav-others">и другие услуги</li>
+      </ul>
+
+      <ul class="types__list">
+        <li class="payment-type container container--types" id="driving-fines">
+          <div class="payment-type__picture">
+            <picture>
+              <!-- 1х: 320x320px; 2x: 640x640px -->
+              <source type="image/webp"
+                srcset="img/pic_block1.webp 1x, img/pic_block1@2x.webp 2x">
+              <img src="img/pic_block1.jpg" alt="Штрафы ГИБДД" width="320" height="320"
+                srcset="img/pic_block1@2x.jpg 2x">
+            </picture>
+          </div>
+          <div class="payment-type__info">
+            <div class="payment-type__header">
+              <svg width="48" height="44" viewBox="2 0 48 44"><use xlink:href="img/sprite_auto.svg#ic_gibdd1"></use></svg>
+              <h3 class="payment-type__title">Штрафы ГИБДД</h3>
+            </div>
+            <div class="payment-type__info-block">
+              <p class="payment-type__text">Для поиска укажите номера водительского удостоверения и свидетельства о регистрации ТС или номер штрафа.</p>
+              <p class="payment-type__text">Если у вас есть на руках постановление о штрафе, вы можете указать реквизиты самостоятельно.</p>
+              <b class="payment-type__accented">Платить вовремя — дешевле!</b>
+              <p class="payment-type__text">В первые 20 дней после выдачи постановления штраф можно оплатить со скидкой 50%. Для своевременной оплаты штрафов настройте уведомления в Личном кабинете.</p>
+            </div>
+          </div>
+        </li>
+        <li class="payment-type container container--types" id="court-debts">
+          <div class="payment-type__picture">
+            <picture>
+              <!-- 1х: 320x320px; 2x: 640x640px -->
+              <source type="image/webp"
+                srcset="img/pic_block2.webp 1x, img/pic_block2@2x.webp 2x">
+              <img src="img/pic_block2.jpg" alt="Судебные задолженности" width="320" height="320"
+                srcset="img/pic_block2@2x.jpg 2x">
+            </picture>
+          </div>
+          <div class="payment-type__info">
+            <div class="payment-type__header">
+              <svg width="48" height="41" viewBox="5 0 48 41"><use xlink:href="img/sprite_auto.svg#ic_fssp"></use></svg>
+              <h3 class="payment-type__title">Судебные задолженности</h3>
+            </div>
+            <div class="payment-type__info-block">
+              <p class="payment-type__text">Для поиска начислений в ГИС ГМП укажите документы: паспорт РФ, ИНН, СНИЛС или номер Исполнительного производства.</p>
+              <p class="payment-type__text">Вы можете указать реквизиты платежа самостоятельно, заполнив форму.</p>
+              <b class="payment-type__accented">Удобно!</b>
+              <p class="payment-type__text">Судебные задолженности можно погасить как сразу, так и по частям, комфортными для вас платежами. Информацию о совершенных платежах сохраняйте в Личном кабинете.</p>
+            </div>
+          </div>
+        </li>
+        <li class="payment-type container container--types" id="taxes">
+          <div class="payment-type__picture">
+            <picture>
+              <!-- 1х: 320x320px; 2x: 640x640px -->
+              <source type="image/webp"
+                srcset="img/pic_block3.webp 1x, img/pic_block3@2x.webp 2x">
+              <img src="img/pic_block3.jpg" alt="Налоги" width="320" height="320"
+                srcset="img/pic_block3@2x.jpg 2x">
+            </picture>
+          </div>
+          <div class="payment-type__info">
+            <div class="payment-type__header">
+              <svg width="48" height="41" viewBox="5 0 48 41"><use xlink:href="img/sprite_auto.svg#ic_nalog"></use></svg>
+              <h3 class="payment-type__title">Налоги</h3>
+            </div>
+            <div class="payment-type__info-block">
+              <p class="payment-type__text">Для поиска начислений по налогам в ГИС ГМП укажите ИНН или Индекс налогового документа, если у вас на руках есть квитанция.</p>
+              <b class="payment-type__accented">Важно!</b>
+              <p class="payment-type__text">Согласно законодательству РФ вы не можете оплачивать налоги за других физических лиц. Принимаются только платежи физических лиц.</p>
+            </div>
+          </div>
+        </li>
+        <li class="payment-type container container--types" id="rosregister">
+          <div class="payment-type__picture">
+            <picture>
+              <!-- 1х: 320x320px; 2x: 640x640px -->
+              <source type="image/webp"
+                srcset="img/pic_block4.webp 1x, img/pic_block4@2x.webp 2x">
+              <img src="img/pic_block4.jpg" alt="Услуги Росреестра" width="320" height="320"
+                srcset="img/pic_block4@2x.jpg 2x">
+            </picture>
+          </div>
+          <div class="payment-type__info">
+            <div class="payment-type__header">
+              <svg width="48" height="41" viewBox="5 0 48 41"><use xlink:href="img/sprite_auto.svg#ic_rr"></use></svg>
+              <h3 class="payment-type__title">Услуги Росреестра</h3>
+            </div>
+            <div class="payment-type__info-block">
+              <p class="payment-type__text">В поисковой строке укажите Код платежа, который был отправлен вам на почтовый ящик, указанный при подаче запроса в Росреестре.</p>
+              <b class="payment-type__accented">Нет кода?</b>
+              <p class="payment-type__text">Если у вас ещё нет кода платежа, перейдите на сайт <a class="link" href="https://rosreestr.ru">rosreestr.ru</a> и сформируйте запрос на оплату электронных услуг Росреестра.</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="our-partners container container--partners">
+      <h2 class="our-partners__title">С нами работают</h2>
+      <ul class="our-partners__list">
+        <li class="our-partners__item">
+          <img src="./img/logo_partner1.svg" alt="Лого Партнера 1" width="110" height="100">
+          <p class="our-partners__name">Партнёр 1</p>
+        </li>
+        <li class="our-partners__item">
+          <img src="./img/logo_partner2.svg" alt="Лого Партнера 2" width="90" height="100">
+          <p class="our-partners__name">Компания-партнер с длинным названием</p>
+        </li>
+        <li class="our-partners__item">
+          <img src="./img/logo_partner3.svg" alt="Лого Партнера 3" width="100" height="100">
+          <p class="our-partners__name">Партнёр 3</p>
+        </li>
+        <li class="our-partners__item">
+          <img src="./img/logo_partner4.svg" alt="Лого Партнера 4" width="148" height="100">
+          <p class="our-partners__name">Название партнёра 4</p>
+        </li>
+        <li class="our-partners__item">
+          <img src="./img/logo_partner5.svg" alt="Лого Партнера 5" width="115" height="100">
+          <p class="our-partners__name">Компания-партнёра 5</p>
+        </li>
+        <li class="our-partners__item">
+          <img src="./img/logo_partner6.svg" alt="Лого Партнера 6" width="114" height="100">
+          <p class="our-partners__name">Партнер 6<br>с длинным названием</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__wrapper container container--footer">
+      <p class="page-footer__copyright-info">
+        <span>© 2012 – 2020</span>
+        <a class="page-footer__copyright-link" href="#">ООО «Название компании»</a>
+      </p>
+      <img class="page-footer__copyright-logo" src="./img/comodossl-trustlogo2.png" alt="Права защищены">
+    </div>
+  </footer>
+
+  <div class="login-modal hidden">
+    <div class="login-modal__wrapper">
+      <button class="login-modal__close-btn" type="button">
+        <span class="visually-hidden">Закрыть окно</span>
+        <svg width="22" height="22"><use xlink:href="img/sprite_auto.svg#ic_close"></use></svg>
+      </button>
+      <form class="login-modal__form form" action="#" method="post">
+        <p class="login-modal__text">Введите логин и пароль для входа в Личный кабинет</p>
+        <label class="visually-hidden" for="user-login">Введите логин</label>
+        <input class="login-modal__input form__input" type="text" name="user-login" id="user-login" placeholder="Логин" required>
+        <label class="visually-hidden" for="user-password">Введите пароль</label>
+        <input class="login-modal__input form__input" type="password" name="user-password" id="user-password" placeholder="Пароль" required>
+        <button class="login-modal__submit-btn form__btn" type="submit">Войти</button>
+        <a class="login-modal__link link" href="#">Напомнить пароль</a>
+        <a class="login-modal__link link" href="#">Регистрация</a>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+.link {
+  color: $main-theme-color;
+
+  &:hover,
+  &:focus {
+    color: $hover-theme-color;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}

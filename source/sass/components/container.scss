@@ -1,0 +1,35 @@
+.container {
+  max-width: $max-desktop-width * 0.75;
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
+
+  &--footer {
+    max-width: $max-desktop-width * 0.95;
+    width: 95%;
+  }
+
+  &--types {
+    max-width: $max-desktop-width;
+    width: 100%;
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+  }
+}
+
+@media (max-width: $max-mobile-width) {
+  .container {
+    width: 88.88%;
+
+    &--types {
+      width: 100%;
+      padding-left: 4.9%;
+      padding-right: 4.9%;
+      max-width: 600px;
+    }
+
+    &--partners {
+      width: 95%;
+    }
+  }
+}

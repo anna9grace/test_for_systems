@@ -1,0 +1,94 @@
+.search-payments {
+  @include font-sizes(16px, 22px, 400);
+  padding-top: 90px;
+  padding-bottom: 95px;
+  color: $main-color-light;
+  background: $main-theme-color url("../img/pic_main.jpg");
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background: $main-theme-color url("../img/pic_main@2x.jpg");
+  }
+}
+
+.search-payments__title {
+  @include font-sizes(36px, 49px, 600);
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.search-payments__field {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.search-payments__input {
+  flex-grow: 1;
+  align-self: stretch;
+  padding: 0 50px 3px 23px;
+}
+
+.search-payments__btn {
+  @include font-sizes(24px, 33px, 600);
+  margin-left: 16px;
+  padding: 14px 33px;
+  color: inherit;
+
+  svg {
+    display: none;
+  }
+}
+
+.search-payments__text {
+  margin-top: 10px;
+}
+
+
+@media (max-width: $max-mobile-width) {
+  .search-payments {
+    @include font-sizes(12px, 16px, 400);
+    padding-top: 40px;
+    padding-bottom: 27px;
+
+    .search-payments__btn {
+      background: none;
+
+      &:hover,
+      &:focus {
+        background: none;
+      }
+    }
+  }
+
+  .search-payments__title {
+    @include font-sizes(20px, 27px, 600);
+    margin-bottom: 19px;
+    text-align: center;
+  }
+
+  .search-payments__input {
+    padding-left: 10px;
+
+    &::placeholder {
+      font-size: 16px;
+    }
+  }
+
+  .search-payments__btn {
+    @include sizes(48px, 48px);
+    position: relative;
+    margin-left: -48px;
+    padding: 0;
+    color: $main-theme-color;
+    z-index: 1;
+
+    span {
+      display: none;
+    }
+
+    svg {
+      display: block;
+    }
+  }
+}
